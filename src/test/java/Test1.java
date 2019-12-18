@@ -11,7 +11,7 @@ public class Test1 {
     ChromeOptions option = new ChromeOptions();
 
     @BeforeTest
-    void dfgdfg1() {
+    void before() {
         System.out.println("BeforeTest");
         option.addArguments("headless");
         driver = new ChromeDriver(option);
@@ -19,15 +19,15 @@ public class Test1 {
     }
 
     @AfterTest
-    void dfgdfg2() {
+    void after() {
         System.out.println("AfterTest");
         driver.quit();
     }
 
     @Test
-    void dfgdfg() {
-        System.out.println("Test");
+    void openGoogle() {
+        System.out.println("Test run");
         driver.get("https://www.google.com/");
-        System.out.println(driver.getCurrentUrl());
+        System.out.println("get current url: " + driver.getCurrentUrl());
     }
 }
