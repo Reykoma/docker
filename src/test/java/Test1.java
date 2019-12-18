@@ -12,7 +12,7 @@ public class Test1 {
 
     @BeforeTest
     void before() {
-        System.out.println("BeforeTest");
+        System.out.println("start driver");
         option.addArguments("headless");
         driver = new ChromeDriver(option);
 
@@ -20,7 +20,7 @@ public class Test1 {
 
     @AfterTest
     void after() {
-        System.out.println("AfterTest");
+        System.out.println("quit driver");
         driver.quit();
     }
 
