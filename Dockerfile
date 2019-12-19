@@ -1,14 +1,17 @@
-FROM    maven:3.6.3-jdk-11-openj9
-
-RUN     mkdir -p /docker
-
-WORKDIR /docker
-
-COPY    pom.xml .
-RUN     mvn dependency:resolve
-
-COPY    testng.xml .
-COPY src/ src/
+FROM maven:3.5.3-jdk-8-alpine
 
 
-RUN     mvn clean verify
+
+
+# Install dependencies
+RUN apk update
+RUN apk --update \
+    add build-base \
+    chromium \
+    chromium-chromedriver 
+
+
+
+
+COPY . .
+RUN mvn test

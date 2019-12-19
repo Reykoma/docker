@@ -4,15 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>docker</groupId>
-    <artifactId>docker</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-
-    <!-- (sourceEncoding = UTF-8) so that the maven does not swear at the encoding when the run 'mvn test' command   -->
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <groupId>x</groupId>
+    <artifactId>y</artifactId>
+    <version>1.0</version>
 
     <dependencies>
         <dependency>
@@ -22,7 +16,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -38,32 +31,12 @@
 
     </dependencies>
 
-    <build>
+        <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M4</version>
-
-                <configuration>
-
-                    <suiteXmlFiles>
-                        <!-- TestNG suite XML files -->
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
+                <version>3.0.0-M1</version>
             </plugin>
         </plugins>
     </build>
-
 </project>
