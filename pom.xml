@@ -29,14 +29,6 @@
             <version>28.1-jre</version>
         </dependency>
 
-        <!-- for org.apache.commons.io.FileUtils; -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.6</version>
-        </dependency>
-
-
     </dependencies>
 
         <build>

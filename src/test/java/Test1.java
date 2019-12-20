@@ -14,8 +14,6 @@ public class Test1 {
     void before() {
         System.out.println("start driver");
         option.addArguments("headless");
-        option.setCapability("enableVNC", true);
-
 
         driver = new ChromeDriver(option);
 
