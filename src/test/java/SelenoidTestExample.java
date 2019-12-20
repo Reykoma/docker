@@ -8,7 +8,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class SelenoidTestExample {
-//docker start selenoid
+    //docker run -d -p 4444:4444 selenium/standalone-chrome
+    //or docker start selenoid
 
     private RemoteWebDriver driver;
 
